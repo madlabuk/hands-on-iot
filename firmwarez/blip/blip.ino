@@ -1,9 +1,8 @@
 // headers
 int blip(String len);
 
-int ledPin = D7;      // built-in LED
-int anotherPin = D0;  // not the built-in LED
-int d = 0;
+const int ledPin = D7;      // built-in LED
+const int anotherPin = D0;  // not the built-in LED
 
 // app
 void setup() {
@@ -11,7 +10,7 @@ void setup() {
     pinMode(anotherPin, OUTPUT);
     digitalWrite(ledPin, LOW);
     digitalWrite(anotherPin, LOW);
-    Spark.function("blip", blip);
+    Particle.function("blip", blip);
 }
 
 void loop() {

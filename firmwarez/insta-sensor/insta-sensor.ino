@@ -11,6 +11,6 @@ void loop() {
     sensorValue = analogRead(sensorPin);
     Serial.println(sensorValue);
     sprintf(resultstr, "reading: %i", sensorValue);
-    Spark.publish("reading", resultstr);
-    delay(2000);
+    Particle.publish("reading", resultstr);
+    delay(1000);
 }
